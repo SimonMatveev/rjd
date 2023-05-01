@@ -1,0 +1,10 @@
+.page {
+    --main-text-color: #262626;
+    --default-red-color: #E31B1A;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    color: var(--main-text-color);
+}

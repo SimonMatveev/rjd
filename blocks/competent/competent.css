@@ -1,0 +1,29 @@
+.competent {
+    padding: 260px 0 200px;
+    background-color: #E5E5E5;
+}
+
+.title {
+    font-family: 'Gilroy',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 1;
+    color: #262626;
+    margin: 0 0 48px;
+}
+
+.competent__content {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 40px;
+}
+
+.competent__card {
+    padding: 48px;
+    box-sizing: border-box;
+    background-color: white;
+}
