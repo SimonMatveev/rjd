@@ -71,4 +71,9 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 500;
+    transition: all .3s;
+}
+
+.lead__down:hover {
+    background-image: url(../../images/button-down-hov.svg);
 }
