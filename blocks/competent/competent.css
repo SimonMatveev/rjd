@@ -3,27 +3,116 @@
     background-color: #E5E5E5;
 }
 
-.title {
-    font-family: 'Gilroy',sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 72px;
-    line-height: 1;
-    color: #262626;
-    margin: 0 0 48px;
-}
-
 .competent__content {
     list-style: none;
-    margin: 0;
+    margin: 0 0 40px;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: space-between;
     gap: 40px;
+    counter-reset: cards;
+
 }
 
 .competent__card {
     padding: 48px;
     box-sizing: border-box;
     background-color: white;
+    position: relative;
+    counter-increment: cards 1;
+    min-height: 328px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all .3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.competent__card_hidden {
+    display: none;
+}
+
+.competent__number {
+    margin: 0 0 23px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--default-red-color);
+    transition: all .3s;
+}
+
+.competent__card-title {
+    margin: 0;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.17;
+    color: var(--main-text-color);
+    transition: all .3s;
+}
+
+.competent__card-button {
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/arrow-right.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: auto;
+    transition: all .3s;
+    z-index: 500;
+}
+
+.competent__card:hover {
+    background-color: var(--default-red-color);
+}
+
+.competent__card:hover .competent__card-title {
+    color: white;
+}
+
+.competent__card:hover .competent__number {
+    color: white;
+}
+
+.competent__card:hover .competent__card-button {
+    background-image: url(../../images/arrow-right-hov.svg);
+    transform: translateX(152px);
+}
+
+.competent__card::after {
+    content: 'Индикаторы';
+    font-family: 'Gilroy',sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.17;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 48px;
+    left: 48px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+}
+
+.competent__card:hover::after {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.competent__load-button {
+    width: 100%;
+    display: none;
+}
+
+.competent__load-button_visible {
+    display: block;
 }
