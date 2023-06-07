@@ -43,6 +43,22 @@
                 <button class="button competent__load-button" type="button">Загрузить ещё</button>
             </div>
         </section>
+        <section class="base container">
+            <h2 class="title">База знаний</h2>
+            <ul class="base__tags">
+                <li class="base__tag base__tag_active">Все</li>
+                <li class="base__tag">Распоряжение</li>
+                <li class="base__tag">Автоматика и телемеханика</li>
+                <li class="base__tag">Приказ</li>
+                <li class="base__tag">Телемеханика</li>
+                <li class="base__tag">Автоматика</li>
+                <li class="base__tag">Устав</li>
+                <li class="base__tag">Телеавтоматика</li>
+                <li class="base__tag">Автомеханика</li>
+            </ul>
+            <ul class="base__card-container"></ul>
+            <button class="button base__button" type="button">Загрузить ещё</button>
+        </section>
 
         <div class="popup" id="cards-popup">
             <div class="popup__container">
@@ -54,7 +70,31 @@
         </div>
 
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__column">
+                <img src="./images/logo.png" alt="РЖД. Логотип" class="footer__logo logo">
+                <h2 class="footer__title">Заголовок с&nbsp;главной страницы</h2>
+            </div> 
+            <nav class="footer__column">
+                <h3 class="footer__column-title">Навигация</h3>
+                <ul class="footer__navigation">
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Главная</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Компетенции</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">База знаний</a></li>
+                </ul>
+            </nav>
+            <nav class="footer__column">
+                <h3 class="footer__column-title">Ресурсы</h3>
+                <ul class="footer__navigation">
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">Институт экономики и&nbsp;финансов</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">РУТ (МИИТ)</a></li>
+                    <li class="footer__nav-item"><a href="" class="footer__nav-link">ОАО “РЖД”</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="footer__copy">&copy; 2023 "Российский университет транспорта"</p>
+    </footer>
 
     <template id="competent-card">
         <li class="competent__card">
@@ -63,9 +103,20 @@
             <button class="competent__card-button" type="button"></button>
         </li>
     </template>
+
+    <template id="base-card">
+        <li class="base__card">
+            <a href="" class="base__card-link">
+                <p class="base__card-tag"></p>
+                <h3 class="base__card-title"></h3>
+                <p class="base__card-date"></p>
+            </a>
+        </li>
+    </template>
+
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/initialCards.js"></script>
-    <script src="./scripts/competent.js"></script>
+    <script type='module' src="./scripts/competent.js"></script>
+    <script type='module' src="./scripts/base.js"></script>
 </body>
 
 </html>

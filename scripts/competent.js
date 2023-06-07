@@ -1,3 +1,5 @@
+import { initialCards } from "./initialCards.js";
+
 const cardContainer = document.querySelector('.competent__content');
 const popupCardsElement = document.querySelector('#cards-popup');
 const loadButton = document.querySelector('.competent__load-button');
